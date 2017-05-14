@@ -1,0 +1,6 @@
+model_checkpoint_path: "my-model.csv-1900"
+all_model_checkpoint_paths: "my-model.csv-1500"
+all_model_checkpoint_paths: "my-model.csv-1600"
+all_model_checkpoint_paths: "my-model.csv-1700"
+all_model_checkpoint_paths: "my-model.csv-1800"
+all_model_checkpoint_paths: "my-model.csv-1900"
