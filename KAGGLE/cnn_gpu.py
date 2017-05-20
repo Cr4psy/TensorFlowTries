@@ -87,8 +87,8 @@ def createDatasets(imgs,labels,trainSize,valSize,testSize,shuffle):
     imgsTrain = imgs[0:indx1]
     labelsHotTrain = labels[0:indx1]
 
-# Validation subset
-imgsValidate = imgs[indx1:indx2]
+    # Validation subset
+    imgsValidate = imgs[indx1:indx2]
     labelsHotValidate = labels[indx1:indx2]
     
     # Test subset
