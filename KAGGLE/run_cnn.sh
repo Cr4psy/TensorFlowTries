@@ -2,25 +2,19 @@
 #SBATCH -J CNN
 
 # Defined the time allocation you use
-#SBATCH -A <myCAC>
+#SBATCH -A edu17.DD2424
 
 # 10 minute wall-clock time will be given to this job
-#SBATCH -t 10:00
-
-# Request K80 GPU accelerator
-#SBATCH --gres=gpu:K80:2
+#SBATCH -t 24:00:00
 
 # set tasks per node to 24 to disable hyperthreading
 #SBATCH --ntasks-per-node=24
 
 # load intel compiler and mpi
-
-module add anaconda/py35/4.2.0
 module add cudnn/5.1-cuda-8.0
+module load anaconda/py35/4.2.0
+source activate tensorflow1.1
 
-conda create --name tf python=3.5
-source activate tf
-conda install matplotlib scipy pillow tensorflow-gpu
+python ./cnn_gpu.py
 
-# Run program
-mpirun -n 48 ~/Private/TensorFlowTries/KAGGLE/cnn_gpu.py
+source deactivate
