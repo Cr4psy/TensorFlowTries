@@ -21,7 +21,7 @@ trainSize=0.8
 valSize=0.1
 testSize=0.1
 
-print(os.path.exists(path))
+
 
 path = mainPath
 i=0
@@ -298,9 +298,9 @@ for epoch in range(epochs):#Go through all the epochs
     for batchNum in range(nbBatch):#Go through all the batches
         #print(batchNum)
         if batchSize==1:
-            batch_xs = imgsTrain[batchNum*batchSize]
+                batch_xs = imgsTrain[batchNum*batchSize]
                 batch_ys = labelsHotTrain[batchNum*batchSize]
-            else:
+        else:
                 batch_xs = imgsTrain[batchNum*batchSize:(batchNum*batchSize+(batchSize))]
                 batch_ys = labelsHotTrain[batchNum*batchSize:(batchNum*batchSize+(batchSize))]
         #print(len(batch_xs))
@@ -323,7 +323,7 @@ for epoch in range(epochs):#Go through all the epochs
         if epoch%1==0:
             if saveVariable:
                 saver.save(sess, path+'/SaveModel/cnnSave', global_step=epoch)
-testMAE, testMSE = compute_accuracy(imgsTest, labelsHotTest)
+    testMAE, testMSE = compute_accuracy(imgsTest, labelsHotTest)
     print('Test MAE and MSE: ',testMAE,testMSE)
     
     #Save the MAE and MSE of each epoch
