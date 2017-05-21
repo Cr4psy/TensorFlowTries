@@ -1,0 +1,6 @@
+model_checkpoint_path: "cnnSave-4"
+all_model_checkpoint_paths: "cnnSave-0"
+all_model_checkpoint_paths: "cnnSave-1"
+all_model_checkpoint_paths: "cnnSave-2"
+all_model_checkpoint_paths: "cnnSave-3"
+all_model_checkpoint_paths: "cnnSave-4"
